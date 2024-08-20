@@ -2,6 +2,13 @@
 
 Source code for ACL 2024 findings paper: [Adapting Offline Speech Translation Models for Streaming with Future-Aware Distillation and Inference](https://aclanthology.org/2024.findings-acl.681/)
 
+- [wav2vec-S](#wav2vec-S: Adapting Pre-trained Speech Models for Streaming)
+	- [Requirements and Installation](#requirements-and-installation)
+	- [Streaming Pre-training](#streaming-pre-training)
+	- [Fine-tuning on streaming ST task](#fine-tuning-on-streaming-st-task)
+	- [Fine-tuning on streaming ASR task](#fine-tuning-on-streaming-asr-task)
+	- [Checkpoints](#checkpoints)
+
 ## Requirements and Installation
 - PyTorch version >= 1.10.0
 - Python version >= 3.8
