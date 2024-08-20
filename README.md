@@ -192,25 +192,26 @@ bash wav2vec_s_scripts/eval/eval_wav2vec_s_caat_asr.sh
 
 ### Streaming Speech Translation
 <p align="center" width="100%">
-<img src="./images/simulst-result.png" alt="simul" style="width: 100%; min-width: 300px; display: block; margin: auto;">
+<img src="./images/simulst-result.png" alt="simul" style="width: 80%; min-width: 300px; display: block; margin: auto;">
 </p>
+
 
 ### Streaming Speech Recognition
 <p align="center" width="100%">
-<img src="./images/simulasr-result.png" alt="simul" style="width: 75%; min-width: 300px; display: block; margin: auto;">
+<img src="./images/simulasr-result.png" alt="simul" style="width: 60%; min-width: 300px; display: block; margin: auto;">
 </p>
 
 
 ### Offline Speech Translation
 <p align="center" width="100%">
-<img src="./images/offline-st-result.png" alt="simul" style="width: 70%; min-width: 300px; display: block; margin: auto;">
+<img src="./images/offline-st-result.png" alt="simul" style="width: 60%; min-width: 300px; display: block; margin: auto;">
 </p>
 
 
 
 ### Offline Speech Recognition
 <p align="center" width="100%">
-<img src="./images/offline-asr-result.png" alt="simul" style="width: 70%; min-width: 300px; display: block; margin: auto;">
+<img src="./images/offline-asr-result.png" alt="simul" style="width: 60%; min-width: 300px; display: block; margin: auto;">
 </p>
 
 
