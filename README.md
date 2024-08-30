@@ -18,27 +18,7 @@ Source code for ACL 2024 findings paper: [wav2vec-S: Adapting Pre-trained Speech
 cd fairseq
 pip install -e ./
 ```
-- To install simuleval for streaming inference:
-```shell script
-cd simuleval
-pip install -e ./
-```
-- To install warprnnt-pytorch for computing RNN-T loss:
-```shell script
-export CUDA_HOME=/usr/local/cuda
-export CUDA_TOOLKIT_ROOT_DIR=$CUDA_HOME
-export LD_LIBRARY_PATH="$CUDA_HOME/extras/CUPTI/lib64:$LD_LIBRARY_PATH"
-export LIBRARY_PATH=$CUDA_HOME/lib64:$LIBRARY_PATH
-export LD_LIBRARY_PATH=$CUDA_HOME/lib64:$LD_LIBRARY_PATH
-export CFLAGS="-I$CUDA_HOME/include $CFLAGS"
 
-cd warp_transducer
-mkdir build && cd build
-cmake ..
-make install
-cd ../pytorch_binding
-pip install -e .
-```
 ## Streaming Pre-training
 
 Given a directory containing wav files to be used for pre-training (we recommend splitting each file into separate file 10 to 30 seconds in length). Our streaming pre-training is based on [wav2vec 2.0](https://github.com/facebookresearch/fairseq/tree/main/examples/wav2vec), and the datasets and pre-trained models can be downloaded [here](https://github.com/facebookresearch/fairseq/tree/main/examples/wav2vec).
@@ -113,6 +93,24 @@ Then, run the script to prepare data manifest.
 sh wav2vec_s_scripts/preprocess/preprocess_st_data.sh
 ```
 ### Fine-tuning
+
+To install warprnnt-pytorch for computing RNN-T loss:
+```shell script
+export CUDA_HOME=/usr/local/cuda
+export CUDA_TOOLKIT_ROOT_DIR=$CUDA_HOME
+export LD_LIBRARY_PATH="$CUDA_HOME/extras/CUPTI/lib64:$LD_LIBRARY_PATH"
+export LIBRARY_PATH=$CUDA_HOME/lib64:$LIBRARY_PATH
+export LD_LIBRARY_PATH=$CUDA_HOME/lib64:$LD_LIBRARY_PATH
+export CFLAGS="-I$CUDA_HOME/include $CFLAGS"
+
+cd warp_transducer
+mkdir build && cd build
+cmake ..
+make install
+cd ../pytorch_binding
+pip install -e .
+```
+
 Train an offline text-to-text translation model following [CAAT](https://github.com/danliu2/caat).
 Then, generate sequence distillation training data:
 ```shell script
@@ -130,6 +128,12 @@ sh wav2vec_s_scripts/train/train_wav2vec_s_caat_simulst_base.sh
 ```
 
 ### Evaluation
+To install simuleval for streaming inference:
+```shell script
+cd simuleval
+pip install -e ./
+```
+
 Evaluation on the streaming ST task
 ```shell script
 bash wav2vec_s_scripts/eval/eval_wav2vec_s_caat_st.sh
