@@ -1,7 +1,7 @@
 # wav2vec-S: Adapting Pre-trained Speech Models for Streaming
 Source code for ACL 2024 findings paper: [wav2vec-S: Adapting Pre-trained Speech Models for Streaming](https://aclanthology.org/2024.findings-acl.681)
 
-💥 **News** 💥: We provide an implementation of wav2vec-S with the [Transformers](https://github.com/huggingface/transformers) library at [wav2vec-S-hf](https://github.com/biaofuxmu/wav2vec-S/wav2vec-S-hf) folder.
+💥 **News** 💥: We provide an implementation of wav2vec-S with the [Transformers](https://github.com/huggingface/transformers) library at [wav2vec-S-hf]([https://github.com/biaofuxmu/wav2vec-S/wav2vec-S-hf](https://github.com/biaofuxmu/wav2vec-S/tree/main/wav2vec-S-hf)) folder.
 
 ## [wav2vec-S](#wav2vec-s-adapting-pre-trained-speech-models-for-streaming)
 - [Requirements and Installation](#requirements-and-installation)
